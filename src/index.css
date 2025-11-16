@@ -1,1 +1,54 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary-25: #f3f4ff;
+  --color-primary-50: #e6e8ff;
+  --color-primary-100: #ccd0ff;
+  --color-primary-200: #99a1ff;
+  --color-primary-300: #6672ff;
+  --color-primary-400: #3343ff;
+  --color-primary-500: #0009a5;
+  --color-primary-600: #00088f;
+  --color-primary-700: #000779;
+  --color-primary-800: #000663;
+  --color-primary-900: #00044d;
+  --color-secondary: #504e4c;
+
+  --radius-circle: 50%;
+}
+
+.login-image {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, primary 100%);
+  background-image: url("/login-bg.jpeg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.custom-shadow {
+  box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.24);
+}
+
+.small-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+.small-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.small-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-primary-100);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.small-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-200);
+}
+
+body {
+  font-family: "Hind Siliguri", serif;
+}
