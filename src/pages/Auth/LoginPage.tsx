@@ -31,16 +31,25 @@ export default function LoginPage() {
   async function onSubmit(data: FormData) {
     try {
       const sdk = new TKMSDK();
-      const response = await sdk.callRawAPI("/v1/api/login", "post", {
-        email: data.email,
-        password: data.password,
-      });
+      console.log(data, sdk);
+      // const response = await sdk.callRawAPI("/v1/api/login", "post", {
+      //   email: data.email,
+      //   password: data.password,
+      // });
+      // authDispatch({
+      //   type: "LOGIN",
+      //   payload: {
+      //     role: response.role,
+      //     token: response.token,
+      //     user_id: response.user_id,
+      //   },
+      // });
       authDispatch({
         type: "LOGIN",
         payload: {
-          role: response.role,
-          token: response.token,
-          user_id: response.user_id,
+          role: "admin",
+          token: "token",
+          user_id: 1,
         },
       });
       navigate("/dashboard");

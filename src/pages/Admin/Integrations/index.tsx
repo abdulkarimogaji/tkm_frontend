@@ -14,7 +14,7 @@ import {
 } from "@/components/Icons";
 import ToggleButton from "@/components/ToggleButton";
 
-export default function StaffIntegrationsPage() {
+export default function AdminIntegrationsPage() {
   const integrations = [
     {
       name: "Livestream Integration",

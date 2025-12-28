@@ -40,6 +40,7 @@ import SearchMdIcon from "./SearchMdIcon";
 import Settings02Icon from "./Settings02Icon";
 import Share05Icon from "./Share05Icon";
 import SlashCircle1Icon from "./SlashCircle01Icon";
+import Ticket01Icon from "./Ticket01Icon";
 import Trash02Icon from "./Trash02Icon";
 import User01Icon from "./User01Icon";
 import UserPlus01Icon from "./UserPlus01Icon";
@@ -91,6 +92,7 @@ export {
   Share05Icon,
   Settings02Icon,
   SlashCircle1Icon,
+  Ticket01Icon,
   Trash02Icon,
   User01Icon,
   UserPlus01Icon,
