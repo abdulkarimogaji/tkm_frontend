@@ -14,16 +14,20 @@ export default function SessionProvider({
   async function verifyToken() {
     try {
       const sdk = new TKMSDK();
-      const response = await sdk.callRawAPI("/v1/api/token", "GET", undefined);
+      const response = await sdk.callRawAPI(
+        "/api/auth/check",
+        "GET",
+        undefined
+      );
       authDispatch({
         type: "LOGIN",
         payload: {
-          role: response.role,
-          token: response.token,
-          user_id: response.user_id,
+          role: response.data.role,
+          token: response.data.token,
+          user_id: response.data.user_id,
         },
       });
-    } catch (err) {
+    } catch {
       authDispatch({
         type: "LOGOUT",
         payload: { user_id: 0, token: "", role: "" },
