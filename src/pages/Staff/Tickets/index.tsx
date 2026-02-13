@@ -1,6 +1,8 @@
-import { NavLink, Outlet } from "react-router";
+import { NavLink, Outlet, useLocation } from "react-router";
+import TicketsOverviewModal from "./TicketsOverviewModal";
 
 export default function StaffTicketsPage() {
+  const { pathname } = useLocation();
   return (
     <section className={"flex h-full flex-col bg-primary-25 p-6"}>
       <div
@@ -16,7 +18,7 @@ export default function StaffTicketsPage() {
           <NavLink
             to={"/tickets/new"}
             className={({ isActive }) =>
-              `relative flex flex-col items-center px-4 pt-1.5 ${isActive ? "text-gray-900 font-bold after:w-8 after:h-0.5 after:absolute after:top-full after:mt-1 after:inline-block after:rounded after:bg-primary-600" : "text-gray-600"}`
+              `relative flex flex-col items-center px-4 pt-1.5 ${isActive || pathname === "/tickets" ? "text-gray-900 font-bold after:w-8 after:h-0.5 after:absolute after:top-full after:mt-1 after:inline-block after:rounded after:bg-primary-600" : "text-gray-600"}`
             }
           >
             New (0)
@@ -41,6 +43,7 @@ export default function StaffTicketsPage() {
 
         <Outlet />
       </div>
+      <TicketsOverviewModal />
     </section>
   );
 }

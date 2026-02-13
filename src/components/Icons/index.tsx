@@ -1,3 +1,4 @@
+import AlertCircleIcon from "./AlertCircleIcon";
 import AnnotationInfoIcon from "./AnnotationInfoIcon";
 import ArrowNarrowDownIcon from "./ArrowNarrowDownIcon";
 import ArrowNarrowUpIcon from "./ArrowNarrowUpIcon";
@@ -51,6 +52,7 @@ import XCircleIcon from "./XCircleIcon";
 import XCloseIcon from "./XCloseIcon";
 
 export {
+  AlertCircleIcon,
   AnnotationInfoIcon,
   ArrowNarrowDownIcon,
   ArrowNarrowUpIcon,
