@@ -62,11 +62,7 @@ export default function AdminSidebar() {
       }`}
     >
       <div>
-        <img
-          src="/logos/Amdragz full v4@4x.png"
-          alt=""
-          className="h-10 w-full object-cover"
-        />
+        <img src="/logo.png" alt="" className="h-10 w-full object-cover" />
       </div>
       <ul className="mt-4 flex grow flex-col gap-1">
         {sections.map((section) => (

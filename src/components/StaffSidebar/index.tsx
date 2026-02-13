@@ -3,12 +3,12 @@ import {
   Bell02Icon,
   ChevronRightIcon,
   Dataflow04Icon,
-  File03Icon,
   HomeLineIcon,
   LogOut01Icon,
   Mail01Icon,
   RefreshCCW04Icon,
   Settings02Icon,
+  Ticket01Icon,
   User01Icon,
   Users01Icon,
 } from "../Icons";
@@ -33,9 +33,9 @@ export default function StaffSidebar() {
       icon: Users01Icon,
     },
     {
-      name: "Reports",
-      link: "/reports",
-      icon: File03Icon,
+      name: "Tickets",
+      link: "/tickets",
+      icon: Ticket01Icon,
     },
     {
       name: "Integrations",
@@ -56,11 +56,7 @@ export default function StaffSidebar() {
       }`}
     >
       <div>
-        <img
-          src="/logos/Amdragz full v4@4x.png"
-          alt=""
-          className="h-10 w-full object-cover"
-        />
+        <img src="/logo.png" alt="" className="h-15 w-full object-contain" />
       </div>
       <ul className="mt-4 flex grow flex-col gap-1">
         {sections.map((section) => (
@@ -156,9 +152,11 @@ export default function StaffSidebar() {
             className="rounded-circle h-10 w-10 object-cover"
           />
           <div>
-            <p className="text-sm font-semibold text-gray-700">Lana Steiner</p>
+            <p className="text-sm font-semibold text-gray-700">
+              Magnus Carlsen
+            </p>
             <div className="mt-2 flex items-center gap-1">
-              <p className="text-sm font-medium text-gray-600">Admin</p>
+              <p className="text-sm font-medium text-gray-600">Staff</p>
               <RefreshCCW04Icon className="h-4 w-4 text-gray-600" />
             </div>
           </div>

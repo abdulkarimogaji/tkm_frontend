@@ -1,14 +1,14 @@
+import type { CustomerStatus } from "@/utils/mappings";
 import TKMSDK from "@/utils/TKMSDK";
-import { type UserType } from "@/utils/mappings";
 import { createFilterString } from "@/utils/utils";
 import { useQuery } from "@tanstack/react-query";
 
 type Customer = {
-  id: number;
+  id: string;
   first_name: string;
   last_name: string;
   email: string;
-  status: UserType;
+  status: CustomerStatus;
   created_at: string;
   number_of_invoices: number;
   total_billed: number;
@@ -18,10 +18,9 @@ type Customer = {
 };
 
 type ResponseType = {
-  error: boolean;
+  success: boolean;
   message: string;
-  customers: Customer[];
-  default_currency: string;
+  data: Customer[];
 };
 
 type Filters = {
@@ -41,7 +40,7 @@ async function fetchCustomers({ queryKey }: { queryKey: any }) {
   const filtersStr = createFilterString(queryKey[1]);
   const sdk = new TKMSDK();
   const response: ResponseType = await sdk.callRawAPI(
-    `/v1/api/customers?${filtersStr}`,
+    `/api/users/customers?${filtersStr}`,
     "GET",
     undefined
   );
@@ -56,7 +55,6 @@ export default function useCustomers(filters: Filters, pagination: Pagination) {
   });
 
   return {
-    customers: result.data?.customers ?? [],
-    defaultCurrency: result.data?.default_currency,
+    customers: result.data?.data ?? [],
   };
 }

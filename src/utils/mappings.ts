@@ -4,3 +4,5 @@ export const CUSTOMER_STATUSES = {
 };
 
 export type UserType = "staff" | "customer";
+
+export type CustomerStatus = "active" | "inactive" | "pending";

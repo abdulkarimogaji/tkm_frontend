@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router";
-import { useAuthContext } from "./context/auth";
+import { useAuthContext } from "./context/auth-context";
 import LoginPage from "./pages/Auth/LoginPage";
 import StaffSidebar from "./components/StaffSidebar";
 import StaffDashboardPage from "./pages/Staff/Dashboard";
