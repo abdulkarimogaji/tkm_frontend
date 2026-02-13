@@ -1,4 +1,4 @@
-import { useAuthDispatchContext } from "@/context/auth";
+import { useAuthDispatchContext } from "@/context/auth-context";
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { useNavigate } from "react-router";
 
@@ -45,7 +45,7 @@ export default function LogoutModal({
                   onClick={() => {
                     authDispatch({
                       type: "LOGOUT",
-                      payload: { user_id: 0, token: "", role: "" },
+                      payload: { user_id: "", token: "", role: "" },
                     });
                     navigate("/login");
                   }}

@@ -9,6 +9,10 @@ import AdminDashboardPage from "./pages/Admin/Dashboard";
 import AdminCustomersPage from "./pages/Admin/Customers";
 import AdminTicketsPage from "./pages/Admin/Tickets";
 import AdminIntegrationsPage from "./pages/Admin/Integrations";
+import StaffTicketsPage from "./pages/Staff/Tickets";
+import StaffNewTickets from "./pages/Staff/Tickets/Tabs/NewTickets";
+import StaffOpenTickets from "./pages/Staff/Tickets/Tabs/OpenTickets";
+import StaffResolvedTickets from "./pages/Staff/Tickets/Tabs/ResolvedTickets";
 
 function renderSidebar(role: string) {
   switch (role) {
@@ -36,6 +40,12 @@ function renderRoutes(role: string) {
         <Routes>
           <Route path="/dashboard" element={<StaffDashboardPage />} />
           <Route path="/customers" element={<StaffCustomersPage />} />
+          <Route path="/tickets" element={<StaffTicketsPage />}>
+            <Route index element={<StaffNewTickets />} />
+            <Route path="new" element={<StaffNewTickets />} />
+            <Route path="open" element={<StaffOpenTickets />} />
+            <Route path="resolved" element={<StaffResolvedTickets />} />
+          </Route>
 
           <Route path="*" element={null} />
         </Routes>

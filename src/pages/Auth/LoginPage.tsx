@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router";
 import * as yup from "yup";
 import TKMSDK from "@/utils/TKMSDK";
-import { useAuthDispatchContext } from "@/context/auth";
+import { useAuthDispatchContext } from "@/context/auth-context";
 
 export default function LoginPage() {
   const authDispatch = useAuthDispatchContext();

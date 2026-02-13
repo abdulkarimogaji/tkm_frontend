@@ -1,3 +1,4 @@
+import AnnotationInfoIcon from "./AnnotationInfoIcon";
 import ArrowNarrowDownIcon from "./ArrowNarrowDownIcon";
 import ArrowNarrowUpIcon from "./ArrowNarrowUpIcon";
 import AtSymbolIcon from "./AtSymbolIcon";
@@ -50,6 +51,7 @@ import XCircleIcon from "./XCircleIcon";
 import XCloseIcon from "./XCloseIcon";
 
 export {
+  AnnotationInfoIcon,
   ArrowNarrowDownIcon,
   ArrowNarrowUpIcon,
   AtSymbolIcon,

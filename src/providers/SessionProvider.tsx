@@ -1,6 +1,6 @@
-import { useAuthDispatchContext } from "@/context/auth";
+import { useAuthDispatchContext } from "@/context/auth-context";
 import TKMSDK from "@/utils/TKMSDK";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { useNavigate } from "react-router";
 
 export default function SessionProvider({
@@ -11,14 +11,15 @@ export default function SessionProvider({
   const authDispatch = useAuthDispatchContext();
   const navigate = useNavigate();
 
-  async function verifyToken() {
+  const verifyToken = useCallback(async () => {
     try {
       const sdk = new TKMSDK();
       const response = await sdk.callRawAPI(
         "/api/auth/check",
         "GET",
-        undefined
+        undefined,
       );
+
       authDispatch({
         type: "LOGIN",
         payload: {
@@ -27,18 +28,19 @@ export default function SessionProvider({
           user_id: response.data.user_id,
         },
       });
-    } catch {
+    } catch (error) {
+      console.error(error);
       authDispatch({
         type: "LOGOUT",
-        payload: { user_id: 0, token: "", role: "" },
+        payload: { user_id: "", token: "", role: "" },
       });
       navigate("/login");
     }
-  }
+  }, [authDispatch, navigate]);
 
   useEffect(() => {
     verifyToken();
-  }, []);
+  }, [verifyToken]);
 
   return children;
 }
