@@ -1,6 +1,9 @@
 import AlertCircleIcon from "./AlertCircleIcon";
 import AnnotationInfoIcon from "./AnnotationInfoIcon";
+import ArrowCircleRightIcon from "./ArrowCircleRightIcon";
 import ArrowNarrowDownIcon from "./ArrowNarrowDownIcon";
+import ArrowNarrowLeftIcon from "./ArrowNarrowLeftIcon";
+import ArrowNarrowRightIcon from "./ArrowNarrowRightIcon";
 import ArrowNarrowUpIcon from "./ArrowNarrowUpIcon";
 import AtSymbolIcon from "./AtSymbolIcon";
 import BankNote01Icon from "./BankNote01Icon";
@@ -24,6 +27,7 @@ import File03Icon from "./File03Icon";
 import FileCheck03Icon from "./FileCheck03Icon";
 import FileDownload03Icon from "./FileDownload03Icon";
 import FileSearch03Icon from "./FileSearch03Icon";
+import FlagIcon from "./FlagIcon";
 import FlipBackwardIcon from "./FlipBackwardIcon";
 import HelpCircleIcon from "./HelpCircleIcon";
 import HomeLineIcon from "./HomeLineIcon";
@@ -54,7 +58,10 @@ import XCloseIcon from "./XCloseIcon";
 export {
   AlertCircleIcon,
   AnnotationInfoIcon,
+  ArrowCircleRightIcon,
   ArrowNarrowDownIcon,
+  ArrowNarrowLeftIcon,
+  ArrowNarrowRightIcon,
   ArrowNarrowUpIcon,
   AtSymbolIcon,
   BankNote01Icon,
@@ -78,6 +85,7 @@ export {
   FileCheck03Icon,
   FileDownload03Icon,
   FileSearch03Icon,
+  FlagIcon,
   FlipBackwardIcon,
   HelpCircleIcon,
   HomeLineIcon,
